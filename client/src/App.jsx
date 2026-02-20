@@ -86,7 +86,7 @@ function App() {
 
         {data.profile.organizations?.length > 0 && (
           <div className="org-list">
-            {data.profile.organizations.map(org => (
+            {data.profile.organizations?.map(org => (
               <img key={org.login} src={org.avatarUrl} alt={org.login} title={org.login} className="org-avatar" />
             ))}
           </div>
@@ -202,10 +202,10 @@ function App() {
               <div className="card">
                 <h3><Hash size={20} color="#22d3ee" style={{ marginRight: '0.5rem' }} /> Expert Topics</h3>
                 <div className="topic-list">
-                  {userData.stats.topTopics.map(topic => (
+                  {userData.stats.topTopics?.map(topic => (
                     <span key={topic} className="topic-tag">{topic}</span>
                   ))}
-                  {userData.stats.topTopics.length === 0 && <span style={{ color: '#94a3b8' }}>No topics found</span>}
+                  {(!userData.stats.topTopics || userData.stats.topTopics.length === 0) && <span style={{ color: '#94a3b8' }}>No topics found</span>}
                 </div>
               </div>
             </section>
