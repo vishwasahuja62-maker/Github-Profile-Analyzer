@@ -26,8 +26,8 @@ const RepoBarChart = ({ repos }) => {
             {
                 label: 'Stars',
                 data: repos.map(r => r.stars),
-                backgroundColor: 'rgba(99, 102, 241, 0.6)',
-                borderColor: '#6366f1',
+                backgroundColor: 'rgba(129, 140, 248, 0.4)',
+                borderColor: '#818cf8',
                 borderWidth: 1,
                 borderRadius: 8,
             },
